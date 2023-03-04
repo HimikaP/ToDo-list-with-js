@@ -1,0 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@500&family=Roboto:wght@500&family=Sacramento&family=Varela+Round&display=swap');
+
+#todo-container{
+    background-color: aquamarine;
+    
+    display: inline;
+}
