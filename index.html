@@ -12,13 +12,35 @@
 
     <h3>Enter a to-do </h3>
     <input id="inputIt" value="" type="text" >
-    <button onclick="addItem()" class="addBtn">Add it</button>
+    <button id="addBtn"  >Add it</button>
+    <div id="container"></div>
+    <script > 
+        var inputText = document.getElementById("inputIt");
+        var addIt = document.getElementById("addBtn");
+        var cont= document.getElementById("container");
 
-    
+        addIt.addEventListener("click" , function(){
 
-    
-    <script src="./script.js">
+            var todo = document.createElement('p');
+            todo.innerText = inputText.value;
+          todo.classList.add('todoclass')
+            cont.appendChild(todo);
+            inputText.value = "";
 
+            todo.addEventListener("click" , function(){
+           
+            todo.style.textDecoration = "line-through";
+            
+            }) ;
+
+            todo.addEventListener("dblclick" , function(){
+                
+            cont.removeChild(todo);
+            });
+           
+        });
+
+      
       
     </script>
 </body>
